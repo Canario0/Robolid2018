@@ -1,0 +1,3 @@
+[DEFAULT]
+Port = /dev/ttyACM0
+BaudRate = 9600
