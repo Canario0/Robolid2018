@@ -24,6 +24,8 @@ class Dato(BaseModel):
     valor = IntegerField()
 
 # Funciones para insertar sensores y sus mediciones
+db.connect()
+
 
 def create_sensor(id, nombre):
     with db.atomic():
@@ -41,9 +43,6 @@ def get_sensores():
 def get_mediciones(id):
     sensor= Sensor.select().where(Sensor.id == id)
     return list(sensor.mediciones.dicts()) if len(list(sensor))>0 else []
-
-db.connect()
-
 
 # Solo se ejecuta si lanzas directamente el fichero
 
