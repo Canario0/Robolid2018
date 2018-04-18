@@ -6,7 +6,7 @@ import configparser
 from db import create_medicion, create_sensor, get_mediciones, get_sensores
 import re  # Libreria para expresiones regulares
 
-exp = re.compile(r"#(\d)#\d#(\d+)#\d+#")
+exp = re.compile(r"#(\d)#(\d+)#\d+#")
 
 config = configparser.ConfigParser()
 config.read('configuracion')
