@@ -10,22 +10,11 @@ void setup()
 void loop()
 {
     Serial.print("#");
-    Serial.print(1);
-    Serial.print("#");
-    Serial.print(1);
+    Serial.print(random(1,5));
     Serial.print("#");
     Serial.print(random(0,400));
     Serial.print("#");
     Serial.print(60);
     Serial.println("#");
     delay(1000);
-}
-
-void serialEvent()
-{
-    if (Serial.readStringUntil('\n') == "enciendete")
-    {
-        Serial.println("LED encendido");
-        digitalWrite(LED_BUILTIN, HIGH);
-    }
 }
